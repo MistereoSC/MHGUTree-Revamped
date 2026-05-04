@@ -124,7 +124,7 @@ const activeRoute = computed(() => route.name as string)
 				<div class="w-full h-px bg-primary-500 my-2"></div>
 				<AppMainMenuLink
 					label="About"
-					icon="material-symbols:info-rounded"
+					icon="material-symbols:chat-info-rounded"
 					route-name="About"
 					:active="activeRoute === 'About'"
 				/>

@@ -23,7 +23,7 @@ function getNoteColor(note: TNote) {
 		case 'Y':
 			return 'text-yellow-500'
 		case 'A':
-			return 'text-aqua-500'
+			return 'text-cyan-500'
 		default:
 			return ''
 	}

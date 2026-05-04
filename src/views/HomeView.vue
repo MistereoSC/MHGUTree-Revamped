@@ -18,14 +18,18 @@ const weapons = [
 </script>
 
 <template>
-	<div class="relative z-10 p-8 flex flex-col gap-8 h-full">
-		<div class="grid place-items-center h-full">
-			<div class="grid grid-cols-5 gap-4">
+	<div class="relative z-10 flex flex-col gap-8 h-full overflow-hidden">
+		<div
+			class="grid place-items-center h-full overflow-y-auto scrollable py-12"
+		>
+			<div
+				class="grid max-md:grid-cols-1 max-lg:grid-cols-2 max-2xl:grid-cols-3 grid-cols-4 gap-4"
+			>
 				<router-link
 					v-for="weapon in weapons"
 					:key="weapon.routeName"
 					:to="{name: weapon.routeName}"
-					class="group bg-primary-800/70 border border-primary-700 rounded-xl p-5 flex flex-col items-center gap-3 hover:bg-primary-700/80 hover:border-accent-500 transition-all duration-200 cursor-pointer backdrop-blur-sm min-w-72"
+					class="group bg-primary-800/70 border border-primary-700 rounded-xl p-5 flex flex-col items-center gap-3 hover:bg-primary-700/80 hover:border-accent-500 transition-all duration-200 cursor-pointer backdrop-blur-sm min-w-64"
 				>
 					<img
 						:src="'/icons/' + weapon.icon"

@@ -9,8 +9,11 @@ import {Icon} from '@iconify/vue'
 interface IProps {
 	weapon: TWeapon<TMeleeData>
 	elementStripeClasses?: string
+	dimmed?: boolean
 }
-const props = withDefaults(defineProps<IProps>(), {})
+const props = withDefaults(defineProps<IProps>(), {
+	dimmed: false,
+})
 
 const stripeColor = computed(() => {
 	const elem = props.weapon.data.element || 'none'
@@ -24,7 +27,8 @@ const rarityColor = computed(() => {
 
 <template>
 	<div
-		class="rounded-md select-none transition-shadow w-full h-full bg-primary-700 relative"
+		class="rounded-md select-none transition-all duration-200 w-full h-full bg-primary-700 relative"
+		:class="{'opacity-25': props.dimmed}"
 	>
 		<!-- Left Element stripe -->
 		<div

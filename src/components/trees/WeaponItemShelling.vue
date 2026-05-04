@@ -5,12 +5,13 @@ import WeaponItemRegular from './WeaponItemRegular.vue'
 // ── Props ──────────────────────────────────────────────────────────────────
 interface IProps {
 	weapon: TWeapon<TGunlanceData>
+	dimmed: boolean
 }
-const props = withDefaults(defineProps<IProps>(), {})
+const props = withDefaults(defineProps<IProps>(), {dimmed: false})
 </script>
 
 <template>
-	<WeaponItemRegular :weapon="props.weapon">
+	<WeaponItemRegular :weapon="props.weapon" :dimmed="props.dimmed">
 		<template #extras>
 			<div class="flex items-center">
 				<img

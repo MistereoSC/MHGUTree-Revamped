@@ -5,8 +5,9 @@ import WeaponItemRegular from './WeaponItemRegular.vue'
 // ── Props ──────────────────────────────────────────────────────────────────
 interface IProps {
 	weapon: TWeapon<TDualbladesData>
+	dimmed?: boolean
 }
-const props = withDefaults(defineProps<IProps>(), {})
+const props = withDefaults(defineProps<IProps>(), {dimmed: false})
 
 function getStripeColor() {
 	if (!props.weapon.data.element_2) {
@@ -22,6 +23,7 @@ function getStripeColor() {
 	<WeaponItemRegular
 		:weapon="props.weapon"
 		:element-stripe-classes="getStripeColor()"
+		:dimmed="props.dimmed"
 	>
 		<template #element2>
 			<div v-if="props.weapon.data.element_2" class="flex items-center gap-1">

@@ -5,7 +5,7 @@
 @source inline("text-element-{none,dragon,blastblight,paralysis,sleep,poison,thunder,water,ice,fire}");
 @source inline("from-element-{none,dragon,blastblight,paralysis,sleep,poison,thunder,water,ice,fire}");
 @source inline("to-element-{none,dragon,blastblight,paralysis,sleep,poison,thunder,water,ice,fire}");
-@source inline("text-{aqua,red,blue,green,yellow,purple,orange}-500");
+@source inline("text-{cyan,red,blue,green,yellow,purple,orange}-500");
 @source inline("text-white");
 
 /* Base styles */

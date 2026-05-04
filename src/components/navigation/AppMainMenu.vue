@@ -43,6 +43,7 @@ const activeRoute = computed(() => route.name as string)
 				<AppMainMenuLink
 					label="Dualblades"
 					image-src="weapons/db.png"
+					route-name="Dualblades"
 					:active="activeRoute === 'Dualblades'"
 				/>
 				<AppMainMenuLink
